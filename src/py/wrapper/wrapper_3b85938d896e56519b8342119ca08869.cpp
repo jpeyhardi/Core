@@ -11,7 +11,7 @@ namespace autowig
 
             typedef class ::std::unique_ptr< struct ::statiskit::MultivariateConditionalDistributionEstimation::Estimator, struct ::std::default_delete< struct ::statiskit::MultivariateConditionalDistributionEstimation::Estimator > >  return_type_211930b4467c5394b7933fdf64c94e73;
             virtual return_type_211930b4467c5394b7933fdf64c94e73 copy() const override { PYBIND11_OVERLOAD_UNIQUE_PTR(return_type_211930b4467c5394b7933fdf64c94e73, class_type, copy, ); };
-            typedef class ::std::unordered_set< statiskit::Index, struct ::std::hash< statiskit::Index >, struct ::std::equal_to< statiskit::Index >, class ::std::allocator< statiskit::Index > >  return_type_1b474f5a5e7a5dc3894e485ae0076666;
+            typedef class ::std::unordered_set< unsigned long int, struct ::std::hash< unsigned long int >, struct ::std::equal_to< unsigned long int >, class ::std::allocator< unsigned long int > >  return_type_1b474f5a5e7a5dc3894e485ae0076666;
             virtual return_type_1b474f5a5e7a5dc3894e485ae0076666 children() const override { PYBIND11_OVERLOAD(return_type_1b474f5a5e7a5dc3894e485ae0076666, class_type, children, ); };
             typedef double  return_type_75c720739866535bb74aece0734d68b3;
             typedef struct ::statiskit::MultivariateConditionalDistribution const * param_75c720739866535bb74aece0734d68b3_0_type;

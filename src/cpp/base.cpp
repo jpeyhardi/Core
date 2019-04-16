@@ -14,31 +14,55 @@ namespace statiskit
 
         double reldiff(const Eigen::VectorXd& prev, const Eigen::VectorXd& curr)
         {
-            double norm = 0; 
+            // double norm = 0; 
+            // for(Index i = 0, max_index = prev.size(); i < max_index; ++i)
+            // {
+            //     if(prev[i] == 0)
+            //     { norm +=  pow(curr[i], 2); }
+            //     else
+            //     { norm +=  pow((prev[i]-curr[i])/prev[i], 2); } 
+            // }
+            // return sqrt(norm); 
+            double norm_diff = 0, norm=0; 
             for(Index i = 0, max_index = prev.size(); i < max_index; ++i)
             {
-                if(prev[i] == 0)
-                { norm +=  pow(curr[i], 2); }
-                else
-                { norm +=  pow((prev[i]-curr[i])/prev[i], 2); } 
+                norm_diff +=  pow(curr[i]-prev[i], 2);
+                norm += pow(prev[i], 2);
             }
-            return sqrt(norm); 
+            if(norm != 0)
+            { return sqrt(norm_diff)/sqrt(norm); }
+            else
+            { return sqrt(norm_diff); }
         }
 
         double reldiff(const Eigen::MatrixXd& prev, const Eigen::MatrixXd& curr)
         {
-            double norm = 0; 
+            // double norm = 0; 
+            // for(Index i = 0, max_index = prev.rows(); i < max_index; ++i)
+            // {
+            //     for(Index j = 0, max_index = prev.cols(); j < max_index; ++j)
+            //     {
+            //         if(prev(i,j) == 0)
+            //         { norm +=  pow(curr(i,j), 2); }
+            //         else
+            //         { norm +=  pow((prev(i,j)-curr(i,j))/prev(i,j), 2); }                     
+            //     }
+            // }
+            // return sqrt(norm); 
+
+            double norm_diff = 0, norm = 0; 
             for(Index i = 0, max_index = prev.rows(); i < max_index; ++i)
             {
                 for(Index j = 0, max_index = prev.cols(); j < max_index; ++j)
                 {
-                    if(prev(i,j) == 0)
-                    { norm +=  pow(curr(i,j), 2); }
-                    else
-                    { norm +=  pow((prev(i,j)-curr(i,j))/prev(i,j), 2); }                     
-                }
+                    norm_diff +=  pow(curr(i,j)-prev(i,j), 2);
+                    norm += pow(prev(i,j), 2);
+                }  
             }
-            return sqrt(norm); 
+            if(norm != 0)
+            { return sqrt(norm_diff)/sqrt(norm); }
+            else
+            { return sqrt(norm_diff); }         
         }
 
         boost::mt19937 _random_generator = boost::mt19937(0);

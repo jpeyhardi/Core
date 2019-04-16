@@ -11,7 +11,7 @@ namespace autowig
 
             typedef class ::std::unique_ptr< struct ::statiskit::UnivariateDistributionEstimation::Estimator, struct ::std::default_delete< struct ::statiskit::UnivariateDistributionEstimation::Estimator > >  return_type_32372a30c33c5afe84773c34bf9d184a;
             virtual return_type_32372a30c33c5afe84773c34bf9d184a copy() const override { PYBIND11_OVERLOAD_UNIQUE_PTR(return_type_32372a30c33c5afe84773c34bf9d184a, class_type, copy, ); };
-            typedef class ::std::unordered_set< statiskit::Index, struct ::std::hash< statiskit::Index >, struct ::std::equal_to< statiskit::Index >, class ::std::allocator< statiskit::Index > >  return_type_3e4097cae0375266a0709347ead82e61;
+            typedef class ::std::unordered_set< unsigned long int, struct ::std::hash< unsigned long int >, struct ::std::equal_to< unsigned long int >, class ::std::allocator< unsigned long int > >  return_type_3e4097cae0375266a0709347ead82e61;
             virtual return_type_3e4097cae0375266a0709347ead82e61 children() const override { PYBIND11_OVERLOAD(return_type_3e4097cae0375266a0709347ead82e61, class_type, children, ); };
             typedef double  return_type_12fcf7e5c7655bf5b274be86d31f722f;
             typedef struct ::statiskit::UnivariateDistribution const * param_12fcf7e5c7655bf5b274be86d31f722f_0_type;

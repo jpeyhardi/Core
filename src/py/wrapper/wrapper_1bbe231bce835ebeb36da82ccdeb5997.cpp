@@ -8,7 +8,7 @@ namespace autowig
     {
         public:
 
-            typedef class ::std::unordered_set< statiskit::Index, struct ::std::hash< statiskit::Index >, struct ::std::equal_to< statiskit::Index >, class ::std::allocator< statiskit::Index > >  return_type_b29f44482fce5d5ea16b45d1fa08f72f;
+            typedef class ::std::unordered_set< unsigned long int, struct ::std::hash< unsigned long int >, struct ::std::equal_to< unsigned long int >, class ::std::allocator< unsigned long int > >  return_type_b29f44482fce5d5ea16b45d1fa08f72f;
             virtual return_type_b29f44482fce5d5ea16b45d1fa08f72f children() const override { PYBIND11_OVERLOAD(return_type_b29f44482fce5d5ea16b45d1fa08f72f, class_type, children, ); };
             typedef double  return_type_a8793d7694b85cea8bead585bebfa116;
             typedef struct ::statiskit::UnivariateConditionalDistribution const * param_a8793d7694b85cea8bead585bebfa116_0_type;
