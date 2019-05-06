@@ -911,7 +911,8 @@ namespace statiskit
         {
             if(!sample_spaces[index])
             { throw nullptr_error("sample_spaces"); }
-             _sample_spaces[index] = sample_spaces[index]->copy().release(); 
+            else
+            { _sample_spaces[index] = sample_spaces[index]->copy().release(); }
         }
     }
 
@@ -925,9 +926,10 @@ namespace statiskit
     VectorSampleSpace::~VectorSampleSpace()
     {
         for(Index index = 0, max_index = _sample_spaces.size(); index < max_index; ++index)
-        { 
-            delete _sample_spaces[index];
-            _sample_spaces[index] = nullptr;
+        {
+            if(_sample_spaces[index])
+            { delete _sample_spaces[index]; }
+            _sample_spaces[index] = nullptr; 
         }
         _sample_spaces.clear();
     }
